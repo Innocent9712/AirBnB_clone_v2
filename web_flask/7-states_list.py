@@ -2,9 +2,8 @@
 """
 A simple flask server running on 0.0.0.0:5000
 """
-from flask import Flask
+from flask import Flask, render_template
 from models import storage
-from flask import render_template
 from models.state import State
 
 
@@ -22,7 +21,7 @@ def remove_current_session(exc):
 def display_states():
     """Prints html document with a list of states"""
     states = storage.all(State).values()
-    return render_template('7-states_list.html', state_list=states)
+    return render_template('7-states_list.html', states=states)
 
 
 if __name__ == "__main__":
