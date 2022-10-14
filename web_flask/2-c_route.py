@@ -20,7 +20,7 @@ def display_hbnb():
     return "HBNB"
 
 
-@app.route('/c/<text>')
+@app.route('/c/<text>', strict_slashes=False)
 def display_c(text):
     """Print route param to display"""
     return f"C {text.replace('_', ' ')}"
