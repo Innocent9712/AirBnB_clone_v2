@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-from flask import Flask
-from models import storage
-from flask import render_template
 """
 A simple flask server running on 0.0.0.0:5000
 """
+from flask import Flask
+from models import storage
+from flask import render_template
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
