@@ -12,6 +12,7 @@ app.url_map.strict_slashes = False
 
 @app.teardown_appcontext
 def remove_current_session(exc):
+    """Remove the current SQLAlchemy session."""
     storage.close()
 
 
