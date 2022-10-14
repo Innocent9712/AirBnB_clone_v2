@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask
 """
 A simple flask server running on 0.0.0.0:5000
@@ -10,7 +11,6 @@ app.url_map.strict_slashes = False
 @app.route('/')
 def display_root():
     """Prints 'Hello HBNB!' to display"""
-    # print("Hello HBNB!")
     return "Hello HBNB!"
 
 

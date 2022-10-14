@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask
 from flask import render_template
 """
@@ -11,7 +12,6 @@ app.url_map.strict_slashes = False
 @app.route('/')
 def display_root():
     """Prints 'Hello HBNB!' to display"""
-    # print("Hello HBNB!")
     return "Hello HBNB!"
 
 
