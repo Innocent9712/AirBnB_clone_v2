@@ -21,7 +21,7 @@ def remove_current_session(exc):
 @app.route('/states_list')
 def display_states():
     """Prints html document with a list of states"""
-    states = storage.all(State)
+    states = storage.all(State).values()
     return render_template('7-states_list.html', state_list=states)
 
 
