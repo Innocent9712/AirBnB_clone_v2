@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask
 from models import storage
 from flask import render_template

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask
 """
 A simple flask server running on 0.0.0.0:5000
