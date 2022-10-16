@@ -17,7 +17,7 @@ def remove_current_session(exc):
     storage.close()
 
 
-@app.route('/states_list')
+@app.route('/states_list', strict_slashes=False)
 def display_states():
     """Prints html document with a list of states"""
     states = storage.all(State).values()
@@ -25,4 +25,4 @@ def display_states():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=5000)
