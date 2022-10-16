@@ -11,11 +11,20 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-@app.route('/states_list', strict_slashes=False)
+@app.route('/states', strict_slashes=False)
 def display_states():
     """Prints html document with a list of states"""
     states = storage.all(State).values()
     return render_template('7-states_list.html', states=states)
+
+
+@app.route('/states/<id>')
+def get_state(id):
+    """Prints html document with a state and it's cities"""
+    for state in storage.all(State).values():
+        if state.id == id:
+            return render_template('9-states.html', state=state)
+    return render_template('9-states.html')
 
 
 @app.teardown_appcontext
